@@ -1,16 +1,17 @@
 <template>
   <div>
-    <TableComponent />
+    <Home />
   </div>
 </template>
 
 <script>
-import TableComponent from '@/components/TableComponent.vue'
-
+import Home from '@/pages/Home.vue'
 
 export default {
   components: {
-    TableComponent
+    Home
+
   }
+
 }
 </script>

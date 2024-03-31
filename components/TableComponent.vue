@@ -57,14 +57,14 @@
                     >
                       <span>{{ col.label }}</span>
                       <span class="thead-icon" v-if="setting.order === col.field && setting.sort === 'asc' && setting.sortCount.includes(col.field)">
-                        <img src="@/assets/icons/commonIcons/arrow-up-light.svg" :alt="'Arrow up icon'">
+                        <!-- <img src="@/assets/icons/commonIcons/arrow-up-light.svg" :alt="'Arrow up icon'"> -->
                       </span>
                       <span class="thead-icon" v-if="setting.order === col.field && setting.sort === 'desc' && setting.sortCount.includes(col.field)">
-                        <img src="@/assets/icons/commonIcons/arrow-down-light.svg" :alt="'Arrow down icon'">
+                        <!-- <img src="@/assets/icons/commonIcons/arrow-down-light.svg" :alt="'Arrow down icon'"> -->
                       </span>
                       <span class="thead-icon" v-if="col.sortable && !setting.sortCount.includes(col.field)">
-                        <img src="@/assets/icons/commonIcons/arrow-up-light.svg" :alt="'Arrow up icon'" class="couple-icon">
-                        <img src="@/assets/icons/commonIcons/arrow-down-light.svg" :alt="'Arrow down icon'" class="couple-icon">
+                        <!-- <img src="@/assets/icons/commonIcons/arrow-up-light.svg" :alt="'Arrow up icon'" class="couple-icon"> -->
+                        <!-- <img src="@/assets/icons/commonIcons/arrow-down-light.svg" :alt="'Arrow down icon'" class="couple-icon"> -->
                       </span>
                     </div>
                   </th>
@@ -1216,7 +1216,7 @@
   });
   </script>
   
-  <style scoped lang="scss">
+  <!-- <style scoped lang="scss">
   @import '@/assets/scss/new/components/tableLiteComponent';
-  </style>
+  </style> -->
   
