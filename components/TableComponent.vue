@@ -77,20 +77,6 @@
                       :key="index"
                       class="no-resizable">
                     {{ totalsRowData[col.field] }}
-                    <select-option-component
-                        v-if="col.field === 'status'"
-                        :options="statusTypes"
-                        :is-lite="true"
-                        :is-search-visible="false"
-                        :is-select-all-visible="false"
-                        :is-border="false"
-                        :is-small-options="true"
-                        :lite-placeholder="statusType.includes('all')
-                        ? $t('filters.all') : $t('lowercase_selected')"
-                        class="table-lite-select"
-                        @apply-called="$emit('getList')"
-                        v-model="statusType"
-                    />
                   </td>
                 </tr>
                 </tbody>
@@ -382,34 +368,20 @@
       nextTick,
       onMounted,
   } from 'vue';
-  import {limiter} from '@/lib/helpers/generalHelpers/inputNumberLimiter';
-  import SelectOptionComponent from '@/components/common/SelectOptionComponent.vue';
-  import {statusTypes} from '@/lib/constants/campaign/status/status';
-  import {mapFields} from 'vuex-map-fields';
   
   export default defineComponent({
       name: 'TableLiteComponent',
       components: {
-          SelectOptionComponent
       },
       data() {
           return {
-              statusTypes
           };
       },
       computed: {
-          ...mapFields('campaignList', ['statusType'])
+          
       },
       watch: {
-          statusType(val) {
-              if(val.includes('all')) {
-                  val.shift('all');
-              }
-  
-              if(!val.length) {
-                  val.push('all');
-              }
-          }
+        
       },
       emits: [
           'return-checked-rows',
@@ -1233,7 +1205,6 @@
               movePage,
               nextPage,
               stringFormat,
-              limiter,
               toggleButtonRefs,
               groupingRowsRefs,
               groupingRows,
