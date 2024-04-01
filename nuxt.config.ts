@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// @ts-ignore
 export default defineNuxtConfig({
+  // ssr: false,
   devtools: { enabled: true },
-  ssr: true,
   devServer: {
-    port: 8000 // Change the port number here
+    port: 8000
   }
 })
