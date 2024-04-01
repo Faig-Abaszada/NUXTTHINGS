@@ -121,10 +121,10 @@
                     :key="row[setting.keyColumn] ? row[setting.keyColumn] : i"
                     :ref="
                       (el) => {
-                        // if (!groupingRowsRefs[groupingIndex]) {
-                        //   groupingRowsRefs[groupingIndex] = [];
-                        // }
-                        // groupingRowsRefs[groupingIndex][i] = el;
+                        if (!groupingRowsRefs[groupingIndex]) {
+                          groupingRowsRefs[groupingIndex] = [];
+                        }
+                        groupingRowsRefs[groupingIndex][i] = el;
                       }
                     "
                     :name="'vtl-group-' + groupingIndex"
