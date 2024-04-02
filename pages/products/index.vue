@@ -5,7 +5,12 @@
 </template>
 
 <script>
+ definePageMeta({
+                layout: 'products'
+            });
+            
 export default {
+
     data() {
         return {
             // Your component's data properties go here

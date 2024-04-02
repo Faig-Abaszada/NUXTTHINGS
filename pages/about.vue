@@ -8,6 +8,7 @@
 <script>
 export default {
     name: 'About',
+    
     // Add your component's logic here
     data() {
         return {
