@@ -4,28 +4,28 @@
     </div>
 </template>
 
-<script>
- definePageMeta({
-                layout: 'products'
-            });
-            
-export default {
 
+<script setup>
+definePageMeta({
+  layout: 'products',
+});
+</script>
+
+<script>
+export default {
+    // Options API
     data() {
         return {
-            // Your component's data properties go here
+            // Your component's data properties
         };
     },
-    computed: {
-        // Your component's computed properties go here
-    },
     methods: {
-        // Your component's methods go here
+        // Your component's methods
     },
     mounted() {
-        // Code to run when the component is mounted goes here
+        // Your mounted lifecycle hook
     },
-    // Other component options (e.g., watch, lifecycle hooks) go here
+    // Other Options API properties
 };
 </script>
 

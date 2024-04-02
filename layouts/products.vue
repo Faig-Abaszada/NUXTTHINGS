@@ -9,7 +9,7 @@
 
         <!-- output the page content -->
         <div class="container mx-auto p-4">
-            <slot />
+            <NuxtPage />
         </div>
 
         <footer class="container mx-auto p-4 flex justify-between border-t-2">
