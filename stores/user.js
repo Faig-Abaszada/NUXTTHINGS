@@ -9,6 +9,9 @@ export const useUserStore = defineStore('user', {
     }),
 
     getters: {
+        testGetterData() {
+            return this.$store.favs;
+        }
         // Define your getters here
         // For example:
         // fullName() {

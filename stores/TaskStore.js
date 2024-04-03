@@ -6,5 +6,10 @@ export const useTaskStore = defineStore('TaskStore', {
             { id: 1, title: 'Task 1', isFav: false },
             { id: 2, title: 'Task 2', isFav: true },
         ]
-    })
+    }),
+    getters: {
+        favs() {
+            return this.tasks.filter(task => task.isFav);
+        }
+    }
 });
