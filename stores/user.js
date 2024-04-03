@@ -19,10 +19,10 @@ export const useUserStore = defineStore('user', {
     actions: {
         // Define your actions here
         // For example:
-        setName(name: string) {
+        setName(name) {
             this.name = name;
         },
-        setAge(age: number) {
+        setAge(age) {
             this.age = age;
         },
     },
