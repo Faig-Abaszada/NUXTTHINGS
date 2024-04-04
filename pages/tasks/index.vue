@@ -2,6 +2,9 @@
     <div>
         <h1>Pinia Tasks</h1>
 
+        <button @click="addTask">Add Task</button>
+
+
         <div class="filters">
             <button @click="filter = 'all'">All</button>
             <button @click="filter = 'favs'">Favs</button>  
@@ -44,7 +47,12 @@ export default {
         // ...mapState(useTaskStore, ['favs'])
     },
     methods: {
-       
+       addTask() {
+           this.tasks.push({
+               title: 'New Task',
+               fav: false,
+           });
+       }
     },
     mounted() {
         
