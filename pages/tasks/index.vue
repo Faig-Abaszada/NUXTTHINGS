@@ -23,6 +23,9 @@
                 <task-detail :task="task"/>
             </div>
         </div>
+
+        
+        
     </div>
 </template>
 
@@ -42,9 +45,12 @@ export default {
     },
     computed: {
         // favs getterdir amma adlarini standart qoymaq lazimdiki qarishmasin
-        ...mapWritableState(useTaskStore, ['tasks', 'favs', 'favsCount', 'totalCount']),
+        ...mapWritableState(useTaskStore, ['tasks', 'favs', 'favsCount', 'totalCount', 'getTasks']),
         // for use getter or read only things
         // ...mapState(useTaskStore, ['favs'])
+        // useTaskStore() {
+        //     return useTaskStore();
+        // }
     },
     methods: {
        addTask() {
@@ -55,7 +61,8 @@ export default {
        }
     },
     mounted() {
-        
+        // Call the action to get the tasks
+        // this.actionGetTasks();
     },
 };
 </script>
