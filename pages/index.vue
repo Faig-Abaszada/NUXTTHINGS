@@ -11,12 +11,22 @@
       :is-total-on-top="true"
       :max-height="285"
   ></table-component>
+
+  <br>
+  <br>
+  <div>
+    <input-component
+     type="text"/>
+  </div>
 </div>
 </template>
 <script>
 // import { defineAsyncComponent } from 'vue'
+import InputComponent from "~/components/InputComponent.vue";
+
 export default {
   name: "index",
+  components: {InputComponent},
   // components: {
   //   'table-component': defineAsyncComponent(() => import('@/components/TableComponent.vue'))
   // },
