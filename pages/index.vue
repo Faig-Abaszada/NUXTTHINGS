@@ -11,12 +11,21 @@
       :is-total-on-top="true"
       :max-height="285"
   ></table-component>
+
+
+  <h2>Some Dynamic Component Tests</h2>
+  <component :is="'TestComponent'"></component>
 </div>
 </template>
 <script>
+import {TestComponent} from '#components';
+
 // import { defineAsyncComponent } from 'vue'
 export default {
   name: "index",
+  components: {
+    TestComponent
+  },
   // components: {
   //   'table-component': defineAsyncComponent(() => import('@/components/TableComponent.vue'))
   // },
